@@ -64,7 +64,8 @@ namespace Business.Concrete
         [CacheRemoveAspect("ICarService.Get")]
         public IResult Delete(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Delete(car);
+            return new SuccessResult(Messages.CarDeleted);
         }
 
 
@@ -104,7 +105,8 @@ namespace Business.Concrete
         [CacheRemoveAspect("ICarService.Get")]
         public IResult Update(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarUpdated);
         }
 
         private IResult CheckIfCarCountOfBrandCorrect(int brandId) 
