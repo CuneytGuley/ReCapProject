@@ -1,17 +1,19 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Abstract
 {
-    interface ICarImageService
+    public interface ICarImageService
     {
-        IResult Add(CarImage carImage);
-        IResult Update(CarImage carImage);
+        IResult Add(IFormFile formFile, CarImage carImage);
+        IResult Update(IFormFile formFile, CarImage carImage);
         IResult Delete(CarImage carImage);
         IDataResult<List<CarImage>> GetAll();
+        IDataResult<CarImage> GetById(int id);
         IDataResult<List<CarImage>> GetAllByCarId(int carId);
 
     }

@@ -45,5 +45,12 @@ namespace Business.Constants
         public static string AccessTokenCreated = "Token oluşturuldu";
         public static string BrandListed = "Markalar listelendi";
         public static string ColorListed = "Renkler listelendi";
+        public static string CustomerListed = "Müşteriler listelendi";
+        public static string CarRented = "Araç kiralandı";
+        public static string RentalsListed = "Kiralanan araçlar listelendi";
+        public static string RentedList = "Geri dönmemiş araçlar listelendi";
+        public static string CarImagesLimitExceeded = "Araç resim sayısı limiti aşıldı";
+        public static string CarImageDeleted = "Aracın resmi silindi";
+        public static string CarImageUpdated = "Araç resmi güncellendi";
     }
 }
